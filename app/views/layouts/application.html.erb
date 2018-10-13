@@ -18,6 +18,9 @@
             <span class="icon-bar"></span>
           </button>
         <a class="navbar-brand" href="<%= root_url %>"/>Home</a>
+        <a class="navbar-brand" href="/users/new"/>Sign Up</a>
+        <a class="navbar-brand" href="/signin">Log in</a>
+        </div>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -31,8 +34,7 @@
     <div class="container"  role="main">
       <%= yield %>
     </div>
+
   </body>
-<!-- Spec test has a link to log out from the users/show page -->
-<small><%= logged_in? ? (link_to "Log Out", logout_path) : (link_to "Sign In", signin_path) %></small>
 
 </html>

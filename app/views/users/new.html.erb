@@ -1,14 +1,18 @@
 <%= form_for(@user) do |f| %>
-            <%= f.text_field :name, placeholder: "Name" %>
-            <%= f.password_field :password, placeholder: "Password" %>
-            <%= f.number_field :tickets, placeholder: "Tickets" %> 
-            <%= f.number_field :height, placeholder: "Height in inches" %> 
+            <%= f.label "Name "%><br>
+            <%=f.text_field :name %> <br>
+            <%= f.label "Password "%><br>
+            <%= f.password_field :password %> <br>
+            <%= f.label "Number of Tickets "%><br>
+             <%= f.number_field :tickets %> <br>
+            <%= f.label "Height (in inches)"%><br>
+             <%= f.number_field :height %> <br>
             <br>
-            <%= f.label "How happy are you? 1-10" %>
-            <%= f.number_field :happiness, in: 1...11 %>
-            <%= f.label "How nauseous are you? 1-10" %>
-            <%= f.number_field :nausea, in: 1...11 %>
-            <%= f.label "Are you an Admin?"%>
-            <%= f.check_box :admin, id: "user_admin"%> 
+            <%= f.label "How happy are you? 1-10" %> <br>
+            <%= f.number_field :happiness, in: 1...11 %><br>
+            <%= f.label "How nauseous are you? 1-10" %><br>
+            <%= f.number_field :nausea, in: 1...11 %><br>
+            <%= f.label "Are you an Admin?"%><br>
+            <%= f.check_box :admin, id: "user_admin"%> <br>
 			<%= f.submit %>
 <% end %>

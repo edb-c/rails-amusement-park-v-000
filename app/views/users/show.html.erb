@@ -10,6 +10,8 @@
             <p><%= @user.tickets %></p>
         <label>Mood:</label>
             <p><%= @user.mood %></p>
+
+<%= logged_in? ? (link_to "Log Out", logout_path) : (link_to "Sign In", signin_path) %>
 <% if @message %>
     <p><%= @message %></p>
 <% end %>
